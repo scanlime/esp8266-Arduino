@@ -19,7 +19,7 @@ void setup() {
     delay(1000);
   }
 
-  configTime(3 * 3600, 0, "pool.ntp.org", "time.nist.gov");
+  configTime(timezone * 3600, dst, "pool.ntp.org", "time.nist.gov");
   Serial.println("\nWaiting for time");
   while (!time(nullptr)) {
     Serial.print(".");
